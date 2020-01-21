@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<div class="content">
+	<section class="page">
+		<div class="container">
+			<div class="product-container">
+				<div class="styles">
+					<div class="style">
+						<img src="{{ site.baseurl }}{{ page.image }}">
+					</div>
+				</div>		
+				{% comment %} include product-styles.html product=page {% endcomment %}
+				<div class="product-details" id="add">
+					<h3>{{ page.name }} {{ page.product-type}}</h3>
+{% if page.product-state == "Resurrected" %} 
+<p class="product-status-resurrected"><strong>Resurrected!</strong></p>
+{% endif %} 
+{% if page.product-state == "Retired" %} 
+<p class="product-status-retired"><strong>R.I.P.</strong></p>
+{% endif %} 
+
+{{ page.product-description_markdown | markdownify }}
+
+
+{% if page.product-type	== 'Art Print' %} 				
+{% if page.dimensions %}
+<span><strong>Dimensions</strong></span></br>
+<span class="product-dimensions">Width: {{ page.dimensions.width }}mm x Height: {{ page.dimensions.height }}mm</span>
+{% endif %} 
+{% endif %} 
+
+{% if page.product-state == 'Retired' %} 
+<h4>Ashes to ashes...</h4>
+<p>Unfortunately, this item is no longer available. But never say never, we sometimes resurrect some of our older designs, especially if there's a big demand. If you would like us to consider bringing this design back, please <a href="/contact/" title="Contact Us">get in touch</a>.</p>
+{% else %} 
+	{% assign cleaned-link = page.etsy-link | split: '?' %}
+			<h4>&pound;{{ page.price }}</h4>
+<div class="button"><a href="{{ cleaned-link[0] }}" title="View item on our Etsy shop" target="_blank" >Buy on Etsy</a></div><br>
+	{% endif %} 				
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+

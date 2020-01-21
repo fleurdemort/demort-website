@@ -1,0 +1,147 @@
+# ----
+# Site
+
+title: De Mort
+url: "https://www.demort.co.uk"
+baseurl:
+google_analytics_key: UA-106097727-2
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Art and illustration by freelance artist, Fleur Greenfield. 
+author:
+  name: De Mort
+  email: hello@demort.co.uk
+  twitter: demortdesigns # twitter username without the @ symbol
+social:
+  name: De Mort
+  links:
+    - https://www.demort.co.uk
+
+# -----
+# Build
+timezone: Europe/London
+
+collections:
+  staff_members:
+    _hide_content: true
+    _icon: account_circle
+  products:
+    _hide_content: true
+    output: true
+    _icon: shopping_cart
+  designs:
+    _hide_content: true
+    _icon: style
+
+
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      is_post: "true" 
+      permalink: /blog/:title
+  -
+    scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+      is_product: "true" 
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page" 
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+# Archive setup
+jekyll-archives:
+  enabled: 
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/blog/category/:name/'
+    tag: '/blog/tag/:name/'
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+# -----------
+# CloudCannon
+
+categories:
+  - News
+  - Events
+  - Products
+
+product-states:
+  - Current
+  - Retired
+  - Resurrected
+
+
+social_icons:
+  - Email
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
+
+cloudcannon:
+  data: true
+
+_explore:
+  groups:
+    - heading: Pages
+      collections:
+        - pages
+    - heading: Designs
+      collections:
+        - designs
+    - heading: Products
+      collections:
+        - products
+    - heading: Blogging
+      collections:
+        - posts
+        - drafts
+    - heading: Other
+      collections:
+        - staff_members
+        - data
+
+_comments:
+  map: Update the map location and display settings.
+  latitude: Coordinates for the center marker on the map.
+  longitude: Coordinates for the center marker on the map.
+  zoom: The zoom level for the map.
+  pricing_table: Update the information in the pricing tables.
+  highlight: Emphasis the text
+  color: The background color used in the plan name and call to action.
+  new_window: Open link in new window
+  description: This is used for facebook shares of the page and google indexing

@@ -1,0 +1,40 @@
+---
+title: Contact
+description: Get in touch with us about commissions, our range or just to say hi! 
+email: hello@demort.co.uk
+hero: Get in touch
+---
+
+<h3>Fancy a chat?</h3>
+<p>Questions about your order or our products? Want to speak to us about a commission? Want to just say hi?</p>
+<p>Send us a message using the form below and we'll get back to you as soon as we can.</p>
+
+<div class="contact-box">
+<form name="contact" action="/contact-success/" method="POST" data-netlify="true" class="contact-form">
+		<h4>Send us a message</h4>
+		<label for="name">Full Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter your name..." >
+
+		<label for="email">Email Address</label>
+		<input type="email" name="email" id="email" placeholder="Enter your email..." required inputmode="email">
+
+<label for="enquiry-type">Enquiry type</label>
+		<select name="enquiry-type" id="enquiry-type" placeholder="Please select..." >
+<option value="">--- Please select ---</option>
+<option value="general">General enquiry</option>
+<option value="design">Design enquiry</option>
+<option value="product">Product enquiry</option>
+<option value="commission">Request a commission</option>
+</select>
+
+		<label for="message">Message</label>
+		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+
+		<input type="hidden" name="_to" value="{{ page.email }}">
+		
+<input type="text" name="bot-field" style="display: none;" />
+		<input type="submit" value="Send Message">
+	</form>
+
+</div>
+

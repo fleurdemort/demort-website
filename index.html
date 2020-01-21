@@ -1,0 +1,33 @@
+---
+title: De Mort - Art and Illustration by Fleur Greenfield
+description: Welcome to De Mort - an offbeat and creative project by freelance artist and illustrator, Fleur Greenfield.
+hero: La Fleur de la Mort
+subtitle: Art and Illustration by Fleur Greenfield
+---
+<!-- hero-image: /images/hero-images/pink-zebra-stripes.jpg -->
+<div class="content" id="products">
+	<section>
+		<div class="container">
+			<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_products" class="btn"><strong>&#9998;</strong> Manage products</a></p>
+			<h3>Featured Designs</h3>
+<ul class="product-list">
+{% assign designs = site.designs | sort: 'order' %}
+				{% for design in designs %}
+					<li>
+<div class="styles"><div class="style"><a href="#"><img src="{{ design.image }}" alt="{{ design.name }}"></a></div></div>
+						{% comment %} include product-styles.html product=product {% endcomment %}
+						<div class="product-details">
+							<h4><a href="#">{{ design.name }}</a></h4>
+							<div class="product-description">
+								{{ product.description_markdown | truncate: 45 | markdownify }}
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</section>
+</div>

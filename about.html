@@ -1,0 +1,43 @@
+---
+title: Our Story
+hero: Our story
+description: De Mort is a project by freelance artist and illustrator, Fleur Greenfield. Find out more.
+---
+
+<p class="editor-link" style="text-align: center; position: relative;
+    top: -185px;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p>
+<ul class="staff">
+	{% for person in site.staff_members %}
+		<li>
+			<div class="staff-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
+			<div class="name">{{ person.name }}</div>
+		</li>
+	{% endfor %}
+</ul>
+
+<div class="thirds story-points">
+	<div>
+		<h3 class="editable">
+			Nice to meet you
+		</h3>
+		<p class="editable">
+			Hi there, I'm Fleur. I'm a freelance artist based in Sussex. My heart lies in Newquay - I moved to Cornwall after studying fashion and fell in love with its unique scenery and culture. I started De Mort to bring Newquay&rsquo;s buzzing skate and surf scene to streetwear.&nbsp;<br /><br />And the little guy? That's Trigger, my persistent assistant.
+		</p>
+	</div>
+	<div>
+		<h3 class="editable">
+			Ashes to ashes
+		</h3>
+		<p class="editable">
+			La Fleur De Mort means the 'The Flower of Death'. I&rsquo;m an artist who works on deep conceptual topics and I&rsquo;m passionate about the messages that my work portrays.&nbsp;<br /><br />My style is heavily influenced by pop-art. I love capturing moments and vibes of ​​​everyday home and street life in strong, punchy ways.&nbsp;
+		</p>
+	</div>
+	<div>
+		<h3 class="editable">
+			Want to know more?&nbsp;
+		</h3>
+		<p class="editable">
+			I'd love to hear from you! You can drop me a line on the <a href="/contact/">contact page</a> or on social media. You can also see the stuff I get up to on <a target="_blank" href="https://www.instagram.com/fleurdemort_/">Instagram</a>.&nbsp;<br /><br />I sell a small range of merchandise through Etsy, with favourites shown on the <a href="/products/">Products page</a>.&nbsp;<br /><br />If you'd like to commission a piece, please <a href="/contact/">get in touch</a>.
+		</p>
+	</div>
+</div>

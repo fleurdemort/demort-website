@@ -1,0 +1,81 @@
+.header-thin {
+ padding-bottom:12px
+}
+.hero h2 {
+ font-family:"Bebas Neue",sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.125rem;
+ font-weight:400
+}
+@media (min-width:500px) {
+ .hero h2 {
+  font-size:4rem;
+  letter-spacing:.175rem
+ }
+}
+.post-list {
+ list-style-type:none;
+ padding:0;
+ 
+}
+.post-card {
+ width:100%;
+ margin:20px auto;
+}
+@media (min-width:500px) {
+  .post-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .post-card {
+    max-width: 46%;
+    flex-basis: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .post-card-image {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width:500px) {
+ .post-card-image img {
+  max-height: 100%; 
+  width:auto; 
+ }
+}
+.post-image {
+ width:100%;
+ height:auto;
+ margin:0 auto
+}
+@media (min-width:500px) {
+ .post-image {
+  height: 350px;
+  width: auto;
+ }
+}
+#post-widget {
+ margin-top:30px;
+ padding-top:20px;
+ border-top:1px solid #eee
+}
+#post-widget span {
+ display:block;
+ font-size:1.2rem;
+ color:#666;
+ line-height:1.4em
+}
+.social-share-icon {
+ top:.5em;
+ font-size:1.2rem;
+ height:1.2rem;
+ width:auto;
+ color:#FCA8BA;
+ fill:#FCA8BA
+}
+
+.product-status-resurrected {
+  color: #e4871c;
+} 
